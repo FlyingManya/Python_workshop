@@ -1,6 +1,5 @@
 # Employee Management System
 
-# Initialize the employee list
 employees = [
     {"employee_id": 101, "name": "Sonu Kumar", "salary": 300000, "city": "Delhi"},
     {"employee_id": 102, "name": "Monu Sharma", "salary": 250000, "city": "Mumbai"},
@@ -14,7 +13,7 @@ def display_menu():
     print("\nEmployee Management System")
     print("1. Add Employee")
     print("2. View All Employees")
-    print("3. Search Employee by Name or City")
+    print("3. Search Employee")
     print("4. Edit Employee Details")
     print("5. Delete Employee")
     print("6. Exit")
@@ -30,9 +29,6 @@ def add_employee():
 
 # VIEW
 def view_employees():
-    if not employees:
-        print("No employees to display.")
-    else:
         print("\nEmployee List:")
         for emp in employees:
             print(f"ID: {emp['employee_id']}, Name: {emp['name']}, Salary: {emp['salary']}, City: {emp['city']}")
@@ -65,7 +61,7 @@ def edit_employee():
             else:
                 print("Invalid choice!")
                 return
-            print("Employee details updated successfully!")
+            print("Employee details updated")
             return
     print("Employee not found.")
 
